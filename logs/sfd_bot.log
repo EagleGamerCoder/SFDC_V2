@@ -1,0 +1,7 @@
+2026-10-28 16:00:19 | WARNING  | discord.client | PyNaCl is not installed, voice will NOT be supported
+2026-10-28 16:00:19 | WARNING  | discord.client | davey is not installed, voice will NOT be supported
+2026-10-28 16:00:19 | INFO     | discord.client | logging in using static token
+2026-10-28 16:00:20 | INFO     | sfd_bot.database.connection | Database connection check succeeded.
+2026-10-28 16:00:20 | INFO     | sfd_bot.bot | Database connectivity verified.
+2026-10-28 16:00:20 | INFO     | sfd_bot.bot | Loading 1 Discord extension(s).
+2026-10-28 16:00:20 | INFO     | sfd_bot.bot | Loaded extension: sfd_bot.cogs.utilities
