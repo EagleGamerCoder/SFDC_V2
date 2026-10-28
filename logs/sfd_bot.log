@@ -5,3 +5,46 @@
 2026-10-28 16:00:20 | INFO     | sfd_bot.bot | Database connectivity verified.
 2026-10-28 16:00:20 | INFO     | sfd_bot.bot | Loading 1 Discord extension(s).
 2026-10-28 16:00:20 | INFO     | sfd_bot.bot | Loaded extension: sfd_bot.cogs.utilities
+2026-10-28 16:00:21 | INFO     | sfd_bot.bot | Synced 3 application command(s) to development guild 1559641918701436968.
+2026-10-28 16:00:21 | INFO     | discord.gateway | Shard ID None has connected to Gateway (Session ID: 9d8c8f95355c2f91a2729111c593814c).
+2026-10-28 16:00:23 | INFO     | sfd_bot.bot | Connected to Discord as SFD Command V2#3949 (user_id=1565029246966038540).
+2026-10-28 16:00:39 | ERROR    | sfd_bot.core.errors | Unhandled application-command error for user_id=1434931977571668113 command=ping
+Traceback (most recent call last):
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\app_commands\commands.py", line 858, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\src\sfd_bot\cogs\utilities.py", line 27, in ping
+    embed, files = create_sfd_embed(
+                   ~~~~~~~~~~~~~~~~^
+        title="SFD Systems Status",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        footer=f"SFD Dispatch • v{__version__}",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\nated\SFDC_V2\src\sfd_bot\ui\embeds.py", line 25, in create_sfd_embed
+    raise FileNotFoundError(
+        f"SFD badge image was not found: {BADGE_PATH}"
+    )
+FileNotFoundError: SFD badge image was not found: C:\Users\nated\SFDC_V2\assets\branding\SFD_Main_Badge.png
+2026-10-28 16:01:00 | ERROR    | sfd_bot.core.errors | Unhandled application-command error for user_id=1434931977571668113 command=botinfo
+Traceback (most recent call last):
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\app_commands\commands.py", line 858, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\src\sfd_bot\cogs\utilities.py", line 59, in botinfo
+    embed, files = create_sfd_embed(
+                   ~~~~~~~~~~~~~~~~^
+        title="SFD Dispatch",
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        footer=f"Bot Information • v{__version__}",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\nated\SFDC_V2\src\sfd_bot\ui\embeds.py", line 30, in create_sfd_embed
+    raise FileNotFoundError(
+        f"SFD banner image was not found: {BANNER_PATH}"
+    )
+FileNotFoundError: SFD banner image was not found: C:\Users\nated\SFDC_V2\assets\branding\SFD_Bot_Banner.png
