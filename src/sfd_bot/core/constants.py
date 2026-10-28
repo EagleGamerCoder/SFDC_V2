@@ -1,7 +1,7 @@
 """Shared application constants. Keep changeable Discord IDs in configuration instead."""
 
 APP_NAME = "Springfield Fire Department"
-APP_VERSION = "0.1.0"
+APP_VERSION = "2.1.0"
 
 # Visual palette inspired by the SFD badge. Values are RGB hex integers for Discord embeds.
 SFD_RED = 0xb8443c
