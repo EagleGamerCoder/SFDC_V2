@@ -48,3 +48,610 @@ Traceback (most recent call last):
         f"SFD banner image was not found: {BANNER_PATH}"
     )
 FileNotFoundError: SFD banner image was not found: C:\Users\nated\SFDC_V2\assets\branding\SFD_Bot_Banner.png
+2026-10-28 16:23:56 | WARNING  | sfd_bot.bot | Disconnected from the Discord gateway: waiting for reconnection.
+2026-10-28 16:23:57 | INFO     | discord.gateway | Shard ID None has successfully RESUMED session 9d8c8f95355c2f91a2729111c593814c.
+2026-10-28 18:10:31 | WARNING  | sfd_bot.bot | Disconnected from the Discord gateway: waiting for reconnection.
+2026-10-28 18:10:31 | ERROR    | discord.client | Attempting a reconnect in 0.35s
+Traceback (most recent call last):
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\connector.py", line 1592, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\connector.py", line 1202, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\connector.py", line 1233, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\resolver.py", line 47, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\base_events.py", line 936, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\socket.py", line 983, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\client.py", line 728, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\tasks.py", line 488, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\gateway.py", line 392, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\http.py", line 571, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client.py", line 1312, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client.py", line 900, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client.py", line 854, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\connector.py", line 665, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\connector.py", line 1263, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\connector.py", line 1598, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-b.discord.gg:443 ssl:default [getaddrinfo failed]
+2026-10-28 18:10:32 | WARNING  | sfd_bot.bot | Disconnected from the Discord gateway: waiting for reconnection.
+2026-10-28 18:10:32 | ERROR    | discord.client | Attempting a reconnect in 1.73s
+Traceback (most recent call last):
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\connector.py", line 1592, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\connector.py", line 1202, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\connector.py", line 1233, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\resolver.py", line 47, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\base_events.py", line 936, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\socket.py", line 983, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\client.py", line 728, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\tasks.py", line 488, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\gateway.py", line 392, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\http.py", line 571, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client.py", line 1312, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client.py", line 900, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client.py", line 854, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\connector.py", line 665, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\connector.py", line 1263, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\connector.py", line 1598, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-b.discord.gg:443 ssl:default [getaddrinfo failed]
+2026-10-28 18:10:32 | WARNING  | sfd_bot.bot | Disconnected from the Discord gateway: waiting for reconnection.
+2026-10-29 08:43:34 | ERROR    | discord.client | Attempting a reconnect in 0.65s
+Traceback (most recent call last):
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\connector.py", line 1592, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\connector.py", line 1202, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\connector.py", line 1233, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\resolver.py", line 47, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\base_events.py", line 936, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\socket.py", line 983, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\client.py", line 728, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\tasks.py", line 488, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\gateway.py", line 392, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\http.py", line 571, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client.py", line 1312, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client.py", line 900, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client.py", line 854, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\connector.py", line 665, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\connector.py", line 1263, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\connector.py", line 1598, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-b.discord.gg:443 ssl:default [getaddrinfo failed]
+2026-10-29 08:43:36 | WARNING  | sfd_bot.bot | Disconnected from the Discord gateway: waiting for reconnection.
+2026-10-29 08:43:37 | INFO     | discord.gateway | Shard ID None session has been invalidated.
+2026-10-29 08:43:37 | WARNING  | sfd_bot.bot | Disconnected from the Discord gateway: waiting for reconnection.
+2026-10-29 08:43:43 | INFO     | discord.gateway | Shard ID None has connected to Gateway (Session ID: af41e71b710515b99c12b4b33ee2b999).
+2026-10-29 08:43:45 | INFO     | sfd_bot.bot | Discord gateway session is ready again.
+2026-10-29 11:30:06 | WARNING  | discord.gateway | Shard ID None has stopped responding to the gateway. Closing and restarting.
+2026-10-29 11:30:06 | WARNING  | sfd_bot.bot | Disconnected from the Discord gateway: waiting for reconnection.
+2026-10-29 11:30:06 | INFO     | discord.gateway | Shard ID None session has been invalidated.
+2026-10-29 11:30:06 | WARNING  | sfd_bot.bot | Disconnected from the Discord gateway: waiting for reconnection.
+2026-10-29 11:30:13 | INFO     | discord.gateway | Shard ID None has connected to Gateway (Session ID: 10f1e57eec67d5ae667a6e84e49fb0bc).
+2026-10-29 11:30:15 | INFO     | sfd_bot.bot | Discord gateway session is ready again.
+2026-10-29 11:33:09 | WARNING  | discord.client | PyNaCl is not installed, voice will NOT be supported
+2026-10-29 11:33:09 | WARNING  | discord.client | davey is not installed, voice will NOT be supported
+2026-10-29 11:33:09 | INFO     | discord.client | logging in using static token
+2026-10-29 11:33:09 | INFO     | sfd_bot.database.connection | Database connection check succeeded.
+2026-10-29 11:33:09 | INFO     | sfd_bot.bot | Database connectivity verified.
+2026-10-29 11:33:09 | INFO     | sfd_bot.bot | Loading 1 Discord extension(s).
+2026-10-29 11:33:09 | INFO     | sfd_bot.bot | Loaded extension: sfd_bot.cogs.utilities
+2026-10-29 11:33:10 | INFO     | sfd_bot.bot | Synced 3 application command(s) to development guild 1559641918701436968.
+2026-10-29 11:33:10 | INFO     | discord.gateway | Shard ID None has connected to Gateway (Session ID: 60a4cc906b8fb53f7adda14d13f435a3).
+2026-10-29 11:33:12 | INFO     | sfd_bot.bot | Connected to Discord as SFD Command V2#3949 (user_id=1565029246966038540).
+2026-10-29 11:33:34 | ERROR    | sfd_bot.core.errors | Unhandled application-command error for user_id=1434931977571668113 command=serverinfo
+Traceback (most recent call last):
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\sslproto.py", line 740, in _do_read
+    self._do_read__copied()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\sslproto.py", line 785, in _do_read__copied
+    chunk = self._sslobj.read(self.max_size)
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\ssl.py", line 868, in read
+    v = self._sslobj.read(len)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_RECORD_MAC] sslv3 alert bad record mac (_ssl.c:2710)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\app_commands\commands.py", line 858, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\src\sfd_bot\cogs\utilities.py", line 135, in serverinfo
+    await interaction.response.send_message(
+    ...<3 lines>...
+    )
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\interactions.py", line 1085, in send_message
+    data = await adapter.create_interaction_response(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\webhook\async_.py", line 182, in request
+    async with session.request(
+               ~~~~~~~~~~~~~~~^
+        method, url, data=to_send, headers=headers, params=params, proxy=proxy, proxy_auth=proxy_auth
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as response:
+    ^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client.py", line 1756, in __aenter__
+    self._resp: _RetType_co = await self._coro
+                              ^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client.py", line 900, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client.py", line 878, in _connect_and_send_request
+    await resp.start(conn)
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client_reqrep.py", line 745, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\streams.py", line 716, in read
+    await self._waiter
+aiohttp.client_exceptions.ClientOSError: [Errno 1] [SSL: SSLV3_ALERT_BAD_RECORD_MAC] sslv3 alert bad record mac (_ssl.c:2710)
+2026-10-29 11:36:25 | WARNING  | discord.client | PyNaCl is not installed, voice will NOT be supported
+2026-10-29 11:36:25 | WARNING  | discord.client | davey is not installed, voice will NOT be supported
+2026-10-29 11:36:25 | INFO     | discord.client | logging in using static token
+2026-10-29 11:36:26 | INFO     | sfd_bot.database.connection | Database connection check succeeded.
+2026-10-29 11:36:26 | INFO     | sfd_bot.bot | Database connectivity verified.
+2026-10-29 11:36:26 | INFO     | sfd_bot.bot | Loading 1 Discord extension(s).
+2026-10-29 11:36:26 | INFO     | sfd_bot.bot | Loaded extension: sfd_bot.cogs.utilities
+2026-10-29 11:36:26 | INFO     | sfd_bot.bot | Synced 3 application command(s) to development guild 1559641918701436968.
+2026-10-29 11:36:27 | INFO     | discord.gateway | Shard ID None has connected to Gateway (Session ID: 5fce4bb300cb2d90feaa09a5d87a24e1).
+2026-10-29 11:36:29 | INFO     | sfd_bot.bot | Connected to Discord as SFD Command V2#3949 (user_id=1565029246966038540).
+2026-10-29 11:36:42 | ERROR    | sfd_bot.core.errors | Unhandled application-command error for user_id=1434931977571668113 command=ping
+Traceback (most recent call last):
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\sslproto.py", line 740, in _do_read
+    self._do_read__copied()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\sslproto.py", line 785, in _do_read__copied
+    chunk = self._sslobj.read(self.max_size)
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\ssl.py", line 868, in read
+    v = self._sslobj.read(len)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_RECORD_MAC] sslv3 alert bad record mac (_ssl.c:2710)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\app_commands\commands.py", line 858, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\src\sfd_bot\cogs\utilities.py", line 49, in ping
+    await interaction.response.send_message(
+    ...<3 lines>...
+    )
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\interactions.py", line 1085, in send_message
+    data = await adapter.create_interaction_response(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\webhook\async_.py", line 182, in request
+    async with session.request(
+               ~~~~~~~~~~~~~~~^
+        method, url, data=to_send, headers=headers, params=params, proxy=proxy, proxy_auth=proxy_auth
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as response:
+    ^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client.py", line 1756, in __aenter__
+    self._resp: _RetType_co = await self._coro
+                              ^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client.py", line 900, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client.py", line 878, in _connect_and_send_request
+    await resp.start(conn)
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client_reqrep.py", line 745, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\streams.py", line 716, in read
+    await self._waiter
+aiohttp.client_exceptions.ClientOSError: [Errno 1] [SSL: SSLV3_ALERT_BAD_RECORD_MAC] sslv3 alert bad record mac (_ssl.c:2710)
+2026-10-29 11:38:48 | WARNING  | discord.client | PyNaCl is not installed, voice will NOT be supported
+2026-10-29 11:38:48 | WARNING  | discord.client | davey is not installed, voice will NOT be supported
+2026-10-29 11:38:48 | INFO     | discord.client | logging in using static token
+2026-10-29 11:38:48 | INFO     | sfd_bot.database.connection | Database connection check succeeded.
+2026-10-29 11:38:48 | INFO     | sfd_bot.bot | Database connectivity verified.
+2026-10-29 11:38:48 | INFO     | sfd_bot.bot | Loading 1 Discord extension(s).
+2026-10-29 11:38:48 | INFO     | sfd_bot.bot | Loaded extension: sfd_bot.cogs.utilities
+2026-10-29 11:38:49 | INFO     | sfd_bot.bot | Shutting down Springfield Fire Department bot.
+2026-10-29 11:38:49 | INFO     | sfd_bot.database.connection | Database connection pool disposed.
+2026-10-29 11:38:49 | ERROR    | __main__ | The SFD bot stopped because of an unexpected fatal error.
+Traceback (most recent call last):
+  File "c:\Users\nated\SFDC_V2\src\sfd_bot\main.py", line 46, in main
+    asyncio.run(_run_bot(bot, settings.discord_bot_token))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\runners.py", line 204, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "c:\Users\nated\SFDC_V2\src\sfd_bot\main.py", line 22, in _run_bot
+    await bot.start(token)
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\client.py", line 850, in start
+    await self.login(token)
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\client.py", line 693, in login
+    await self.setup_hook()
+  File "C:\Users\nated\SFDC_V2\src\sfd_bot\bot.py", line 60, in setup_hook
+    await self._sync_application_commands()
+  File "C:\Users\nated\SFDC_V2\src\sfd_bot\bot.py", line 67, in _sync_application_commands
+    synced = await self.tree.sync(guild=guild)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\app_commands\tree.py", line 1121, in sync
+    raise CommandSyncFailure(e, commands) from None
+discord.app_commands.errors.CommandSyncFailure: Failed to upload commands to Discord (HTTP status 400, error code 50035)
+In command 'ping' defined in function 'Utilities.ping'
+  In parameter 'Show_globally'
+    name: Command name is invalid
+In command 'botinfo' defined in function 'Utilities.botinfo'
+  In parameter 'Show_globally'
+    name: Command name is invalid
+In command 'serverinfo' defined in function 'Utilities.serverinfo'
+  In parameter 'Show_globally'
+    name: Command name is invalid
+2026-10-29 11:42:22 | WARNING  | discord.client | PyNaCl is not installed, voice will NOT be supported
+2026-10-29 11:42:22 | WARNING  | discord.client | davey is not installed, voice will NOT be supported
+2026-10-29 11:42:22 | INFO     | discord.client | logging in using static token
+2026-10-29 11:42:22 | INFO     | sfd_bot.database.connection | Database connection check succeeded.
+2026-10-29 11:42:22 | INFO     | sfd_bot.bot | Database connectivity verified.
+2026-10-29 11:42:22 | INFO     | sfd_bot.bot | Loading 1 Discord extension(s).
+2026-10-29 11:42:22 | INFO     | sfd_bot.bot | Loaded extension: sfd_bot.cogs.utilities
+2026-10-29 11:42:22 | INFO     | sfd_bot.bot | Synced 3 application command(s) to development guild 1559641918701436968.
+2026-10-29 11:42:23 | INFO     | discord.gateway | Shard ID None has connected to Gateway (Session ID: 829d2537bef403cb195528f0cd7b0d30).
+2026-10-29 11:42:25 | INFO     | sfd_bot.bot | Connected to Discord as SFD Command V2#3949 (user_id=1565029246966038540).
+2026-10-29 11:42:51 | ERROR    | sfd_bot.core.errors | Unhandled application-command error for user_id=1434931977571668113 command=serverinfo
+Traceback (most recent call last):
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\sslproto.py", line 740, in _do_read
+    self._do_read__copied()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\sslproto.py", line 785, in _do_read__copied
+    chunk = self._sslobj.read(self.max_size)
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\ssl.py", line 868, in read
+    v = self._sslobj.read(len)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_RECORD_MAC] sslv3 alert bad record mac (_ssl.c:2710)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\app_commands\commands.py", line 858, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\src\sfd_bot\cogs\utilities.py", line 135, in serverinfo
+    await interaction.response.send_message(
+    ...<3 lines>...
+    )
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\interactions.py", line 1085, in send_message
+    data = await adapter.create_interaction_response(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\webhook\async_.py", line 182, in request
+    async with session.request(
+               ~~~~~~~~~~~~~~~^
+        method, url, data=to_send, headers=headers, params=params, proxy=proxy, proxy_auth=proxy_auth
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as response:
+    ^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client.py", line 1756, in __aenter__
+    self._resp: _RetType_co = await self._coro
+                              ^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client.py", line 900, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client.py", line 878, in _connect_and_send_request
+    await resp.start(conn)
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client_reqrep.py", line 745, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\streams.py", line 716, in read
+    await self._waiter
+aiohttp.client_exceptions.ClientOSError: [Errno 1] [SSL: SSLV3_ALERT_BAD_RECORD_MAC] sslv3 alert bad record mac (_ssl.c:2710)
+2026-10-29 11:42:56 | ERROR    | sfd_bot.core.errors | Unhandled application-command error for user_id=1434931977571668113 command=serverinfo
+Traceback (most recent call last):
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\sslproto.py", line 740, in _do_read
+    self._do_read__copied()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\sslproto.py", line 785, in _do_read__copied
+    chunk = self._sslobj.read(self.max_size)
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\ssl.py", line 868, in read
+    v = self._sslobj.read(len)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_RECORD_MAC] sslv3 alert bad record mac (_ssl.c:2710)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\app_commands\commands.py", line 858, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\src\sfd_bot\cogs\utilities.py", line 135, in serverinfo
+    await interaction.response.send_message(
+    ...<3 lines>...
+    )
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\interactions.py", line 1085, in send_message
+    data = await adapter.create_interaction_response(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\webhook\async_.py", line 182, in request
+    async with session.request(
+               ~~~~~~~~~~~~~~~^
+        method, url, data=to_send, headers=headers, params=params, proxy=proxy, proxy_auth=proxy_auth
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as response:
+    ^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client.py", line 1756, in __aenter__
+    self._resp: _RetType_co = await self._coro
+                              ^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client.py", line 900, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client.py", line 878, in _connect_and_send_request
+    await resp.start(conn)
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client_reqrep.py", line 745, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\streams.py", line 716, in read
+    await self._waiter
+aiohttp.client_exceptions.ClientOSError: [Errno 1] [SSL: SSLV3_ALERT_BAD_RECORD_MAC] sslv3 alert bad record mac (_ssl.c:2710)
+2026-10-29 11:44:36 | INFO     | sfd_bot.bot | Shutting down Springfield Fire Department bot.
+2026-10-29 11:44:36 | INFO     | sfd_bot.database.connection | Database connection pool disposed.
+2026-10-29 11:44:36 | INFO     | __main__ | Shutdown requested from the terminal.
+2026-10-29 11:45:25 | WARNING  | discord.client | PyNaCl is not installed, voice will NOT be supported
+2026-10-29 11:45:25 | WARNING  | discord.client | davey is not installed, voice will NOT be supported
+2026-10-29 11:45:25 | INFO     | discord.client | logging in using static token
+2026-10-29 11:45:26 | INFO     | sfd_bot.database.connection | Database connection check succeeded.
+2026-10-29 11:45:26 | INFO     | sfd_bot.bot | Database connectivity verified.
+2026-10-29 11:45:26 | INFO     | sfd_bot.bot | Loading 1 Discord extension(s).
+2026-10-29 11:45:26 | INFO     | sfd_bot.bot | Loaded extension: sfd_bot.cogs.utilities
+2026-10-29 11:45:26 | INFO     | sfd_bot.bot | Synced 3 application command(s) to development guild 1559641918701436968.
+2026-10-29 11:45:26 | INFO     | discord.gateway | Shard ID None has connected to Gateway (Session ID: d52302018abb74b0a9827bc4a37751bb).
+2026-10-29 11:45:28 | INFO     | sfd_bot.bot | Connected to Discord as SFD Command V2#3949 (user_id=1565029246966038540).
+2026-10-29 11:48:08 | WARNING  | discord.client | PyNaCl is not installed, voice will NOT be supported
+2026-10-29 11:48:08 | WARNING  | discord.client | davey is not installed, voice will NOT be supported
+2026-10-29 11:48:08 | INFO     | discord.client | logging in using static token
+2026-10-29 11:48:08 | INFO     | sfd_bot.database.connection | Database connection check succeeded.
+2026-10-29 11:48:08 | INFO     | sfd_bot.bot | Database connectivity verified.
+2026-10-29 11:48:08 | INFO     | sfd_bot.bot | Loading 1 Discord extension(s).
+2026-10-29 11:48:08 | INFO     | sfd_bot.bot | Loaded extension: sfd_bot.cogs.utilities
+2026-10-29 11:48:08 | INFO     | sfd_bot.bot | Synced 3 application command(s) to development guild 1559641918701436968.
+2026-10-29 11:48:11 | INFO     | discord.gateway | Shard ID None has connected to Gateway (Session ID: d8ec04074ba6847ff2cc877cfac0db56).
+2026-10-29 11:48:13 | INFO     | sfd_bot.bot | Connected to Discord as SFD Command V2#3949 (user_id=1565029246966038540).
+2026-10-29 12:02:21 | WARNING  | discord.client | PyNaCl is not installed, voice will NOT be supported
+2026-10-29 12:02:21 | WARNING  | discord.client | davey is not installed, voice will NOT be supported
+2026-10-29 12:02:21 | INFO     | discord.client | logging in using static token
+2026-10-29 12:02:22 | INFO     | sfd_bot.database.connection | Database connection check succeeded.
+2026-10-29 12:02:22 | INFO     | sfd_bot.bot | Database connectivity verified.
+2026-10-29 12:02:22 | INFO     | sfd_bot.bot | Loading 1 Discord extension(s).
+2026-10-29 12:02:22 | INFO     | sfd_bot.bot | Loaded extension: sfd_bot.cogs.utilities
+2026-10-29 12:02:22 | INFO     | sfd_bot.bot | Synced 3 application command(s) to development guild 1559641918701436968.
+2026-10-29 12:02:23 | INFO     | discord.gateway | Shard ID None has connected to Gateway (Session ID: 8c53de02e5e0f8f981a896b095f6bd27).
+2026-10-29 12:02:25 | INFO     | sfd_bot.bot | Connected to Discord as SFD Command V2#3949 (user_id=1565029246966038540).
+2026-10-29 12:05:00 | WARNING  | discord.client | PyNaCl is not installed, voice will NOT be supported
+2026-10-29 12:05:00 | WARNING  | discord.client | davey is not installed, voice will NOT be supported
+2026-10-29 12:05:00 | INFO     | discord.client | logging in using static token
+2026-10-29 12:05:01 | INFO     | sfd_bot.database.connection | Database connection check succeeded.
+2026-10-29 12:05:01 | INFO     | sfd_bot.bot | Database connectivity verified.
+2026-10-29 12:05:01 | INFO     | sfd_bot.bot | Loading 1 Discord extension(s).
+2026-10-29 12:05:01 | INFO     | sfd_bot.bot | Loaded extension: sfd_bot.cogs.utilities
+2026-10-29 12:05:01 | INFO     | sfd_bot.bot | Synced 3 application command(s) to development guild 1559641918701436968.
+2026-10-29 12:05:02 | INFO     | discord.gateway | Shard ID None has connected to Gateway (Session ID: 14e7a978c457d76cdcc3a00acc3a34a2).
+2026-10-29 12:05:04 | INFO     | sfd_bot.bot | Connected to Discord as SFD Command V2#3949 (user_id=1565029246966038540).
+2026-10-29 12:05:14 | ERROR    | sfd_bot.core.errors | Unhandled application-command error for user_id=1434931977571668113 command=botinfo
+Traceback (most recent call last):
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\sslproto.py", line 740, in _do_read
+    self._do_read__copied()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\sslproto.py", line 785, in _do_read__copied
+    chunk = self._sslobj.read(self.max_size)
+  File "C:\Users\nated\AppData\Local\Python\pythoncore-3.14-64\Lib\ssl.py", line 868, in read
+    v = self._sslobj.read(len)
+ssl.SSLError: [SSL: SSLV3_ALERT_BAD_RECORD_MAC] sslv3 alert bad record mac (_ssl.c:2710)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\app_commands\commands.py", line 858, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\src\sfd_bot\cogs\utilities.py", line 198, in botinfo
+    await interaction.response.send_message(
+    ...<3 lines>...
+    )
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\interactions.py", line 1085, in send_message
+    data = await adapter.create_interaction_response(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\webhook\async_.py", line 182, in request
+    async with session.request(
+               ~~~~~~~~~~~~~~~^
+        method, url, data=to_send, headers=headers, params=params, proxy=proxy, proxy_auth=proxy_auth
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as response:
+    ^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client.py", line 1756, in __aenter__
+    self._resp: _RetType_co = await self._coro
+                              ^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client.py", line 900, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client.py", line 878, in _connect_and_send_request
+    await resp.start(conn)
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\client_reqrep.py", line 745, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\aiohttp\streams.py", line 716, in read
+    await self._waiter
+aiohttp.client_exceptions.ClientOSError: [Errno 1] [SSL: SSLV3_ALERT_BAD_RECORD_MAC] sslv3 alert bad record mac (_ssl.c:2710)
+2026-10-29 12:05:14 | ERROR    | sfd_bot.core.errors | Unhandled application-command error for user_id=1434931977571668113 command=botinfo
+Traceback (most recent call last):
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\app_commands\commands.py", line 858, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nated\SFDC_V2\src\sfd_bot\cogs\utilities.py", line 198, in botinfo
+    await interaction.response.send_message(
+    ...<3 lines>...
+    )
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\interactions.py", line 1085, in send_message
+    data = await adapter.create_interaction_response(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\nated\SFDC_V2\venv\Lib\site-packages\discord\webhook\async_.py", line 224, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+2026-10-29 12:05:15 | WARNING  | sfd_bot.core.errors | Could not send error response for interaction_id=1565335700071522395
