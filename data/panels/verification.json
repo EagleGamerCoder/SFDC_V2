@@ -1,0 +1,12 @@
+{
+  "key": "roblox_verification",
+  "title": "Roblox Account Verification",
+  "description": "Welcome to the Springfield Fire Department Discord. Link your Roblox account to receive the verified member role and access the appropriate department channels.",
+  "button_label": "Verify with Roblox",
+  "instructions": [
+    "Enter your Roblox username in the private form.",
+    "Copy the temporary code into your Roblox profile description.",
+    "Return to Discord and select Check Verification."
+  ],
+  "privacy_notice": "Your code is shown privately and expires automatically. Never share your Roblox password, session cookie or login details with anyone."
+}

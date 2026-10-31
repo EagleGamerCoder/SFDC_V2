@@ -1,4 +1,4 @@
-"""Centralised Logging setup."""
+"""Centralised console and rotating-file logging setup."""
 
 from __future__ import annotations
 

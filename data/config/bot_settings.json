@@ -1,0 +1,6 @@
+{
+  "application_name": "Springfield Fire Department",
+  "application_version": "2.2.1",
+  "default_timezone": "Europe/London",
+  "shift_week_starts": "Monday"
+}

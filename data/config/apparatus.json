@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "description": "Default Springfield Fire Department callsign and apparatus allocation.",
+  "units": [
+    {
+      "code": "20",
+      "name": "Command 2",
+      "division_key": "command",
+      "self_assignable": false,
+      "sort_order": 20,
+      "positions": [
+        {
+          "number": 1,
+          "key": "fire_chief",
+          "label": "Fire Chief",
+          "callsign": "Chief 2",
+          "self_assignable": false
+        },
+        {
+          "number": 2,
+          "key": "deputy_fire_chief",
+          "label": "Deputy Fire Chief",
+          "callsign": "Deputy 2",
+          "self_assignable": false
+        },
+        {
+          "number": 3,
+          "key": "erd_command",
+          "label": "Assistant Chief (ERD)",
+          "callsign": "ERD Command",
+          "self_assignable": false
+        },
+        {
+          "number": 4,
+          "key": "emsd_command",
+          "label": "Assistant Chief (EMSD)",
+          "callsign": "EMS Command",
+          "self_assignable": false
+        },
+        {
+          "number": 5,
+          "key": "fsd_command",
+          "label": "Assistant Chief (FSD)",
+          "callsign": "FSD Command",
+          "self_assignable": false
+        },
+        {
+          "number": 6,
+          "key": "taad_command",
+          "label": "Assistant Chief (TAAD)",
+          "callsign": "Training Command",
+          "self_assignable": false
+        }
+      ]
+    },
+    {
+      "code": "21",
+      "name": "Engine 2",
+      "division_key": "erd",
+      "self_assignable": true,
+      "sort_order": 21,
+      "positions": [
+        {
+          "number": 1,
+          "key": "officer",
+          "label": "Officer in Charge",
+          "self_assignable": false
+        },
+        {
+          "number": 2,
+          "key": "driver_operator",
+          "label": "Driver / Operator",
+          "self_assignable": false
+        },
+        {
+          "number": 3,
+          "key": "firefighter_1",
+          "label": "Firefighter",
+          "self_assignable": true
+        },
+        {
+          "number": 4,
+          "key": "firefighter_2",
+          "label": "Firefighter",
+          "self_assignable": true
+        }
+      ]
+    },
+    {
+      "code": "22",
+      "name": "Ladder 2",
+      "division_key": "erd",
+      "self_assignable": true,
+      "sort_order": 22,
+      "positions": [
+        {
+          "number": 1,
+          "key": "officer",
+          "label": "Officer in Charge",
+          "self_assignable": false
+        },
+        {
+          "number": 2,
+          "key": "driver_operator",
+          "label": "Driver / Operator",
+          "self_assignable": false
+        },
+        {
+          "number": 3,
+          "key": "ladder_firefighter_1",
+          "label": "Firefighter",
+          "self_assignable": true
+        },
+        {
+          "number": 4,
+          "key": "ladder_firefighter_2",
+          "label": "Firefighter",
+          "self_assignable": true
+        }
+      ]
+    },
+    {
+      "code": "23",
+      "name": "Medic 2",
+      "division_key": "emsd",
+      "self_assignable": true,
+      "sort_order": 23,
+      "positions": [
+        {
+          "number": 1,
+          "key": "medic_officer",
+          "label": "Medic Officer",
+          "self_assignable": false
+        },
+        {
+          "number": 2,
+          "key": "driver_operator",
+          "label": "Driver / Operator",
+          "self_assignable": false
+        },
+        {
+          "number": 3,
+          "key": "paramedic_1",
+          "label": "Paramedic",
+          "self_assignable": true
+        },
+        {
+          "number": 4,
+          "key": "paramedic_2",
+          "label": "Paramedic",
+          "self_assignable": true
+        }
+      ]
+    },
+    {
+      "code": "24",
+      "name": "Brush 2",
+      "division_key": "fsd",
+      "self_assignable": true,
+      "sort_order": 24,
+      "positions": [
+        {
+          "number": 1,
+          "key": "officer",
+          "label": "Officer in Charge",
+          "self_assignable": false
+        },
+        {
+          "number": 2,
+          "key": "driver_operator",
+          "label": "Driver / Operator",
+          "self_assignable": false
+        },
+        {
+          "number": 3,
+          "key": "wildland_firefighter_1",
+          "label": "Wildland Firefighter",
+          "self_assignable": true
+        },
+        {
+          "number": 4,
+          "key": "wildland_firefighter_2",
+          "label": "Wildland Firefighter",
+          "self_assignable": true
+        }
+      ]
+    },
+    {
+      "code": "25",
+      "name": "Training 2",
+      "division_key": "taad",
+      "self_assignable": true,
+      "sort_order": 25,
+      "positions": [
+        {
+          "number": 1,
+          "key": "lead_instructor",
+          "label": "Lead Instructor",
+          "self_assignable": false
+        },
+        {
+          "number": 2,
+          "key": "instructor",
+          "label": "Instructor",
+          "self_assignable": false
+        },
+        {
+          "number": 3,
+          "key": "trainee_1",
+          "label": "Trainee",
+          "self_assignable": true
+        },
+        {
+          "number": 4,
+          "key": "trainee_2",
+          "label": "Trainee",
+          "self_assignable": true
+        }
+      ]
+    }
+  ]
+}

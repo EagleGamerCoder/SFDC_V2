@@ -5,7 +5,7 @@ import discord
 
 from sfd_bot import __version__
 from sfd_bot.core.constants import SFD_RED
-
+from sfd_bot.core.json_loader import load_json_object
 
 # Project root:
 # SFD-Discord-Bot/
@@ -64,5 +64,37 @@ def create_sfd_embed(*, title: str, description: str | None = None, footer: str 
             filename="sfd-banner.png",
         ),
     ]
+
+    return embed, files
+
+def create_verification_panel() -> tuple[discord.Embed, list[discord.File]]:
+    """Build the public SFD account-verification panel from its JSON definition."""
+    panel_path = PROJECT_ROOT / "data" / "panels" / "verification.json"
+    panel = load_json_object(panel_path)
+
+    title = str(panel.get("title", "Roblox Account Verification"))
+    description = str(
+        panel.get(
+            "description",
+            "Link your Roblox account to access the appropriate SFD Discord channels.",
+        )
+    )
+    embed, files = create_sfd_embed(
+        title=title,
+        description=description,
+        footer="SFD Command • Account Verification",
+    )
+
+    instructions = panel.get("instructions", [])
+    if isinstance(instructions, list) and instructions:
+        instruction_text = "\n".join(
+            f"{index}. {str(instruction)}"
+            for index, instruction in enumerate(instructions, start=1)
+        )
+        embed.add_field(name="How it works", value=instruction_text, inline=False)
+
+    privacy_notice = panel.get("privacy_notice")
+    if privacy_notice:
+        embed.add_field(name="Privacy", value=str(privacy_notice), inline=False)
 
     return embed, files

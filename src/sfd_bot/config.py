@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 
 from sfd_bot.core.exceptions import ConfigurationError
 
-# config.py is at SFDC_V2/src/sfd_bot/config.py.
+# config.py is at <project-root>/src/sfd_bot/config.py.
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 _PLACEHOLDER_TOKENS = {
     "replace-with-your-discord-bot-token",
@@ -66,12 +66,35 @@ class Settings:
     sync_global_commands: bool
     log_level: str
     database_url: str
+    verified_role_id: int | None
+    verification_expiry_minutes: int
+    verification_max_attempts: int
     log_directory: Path
     project_root: Path
 
 
+def _parse_bounded_int(
+    name: str,
+    value: str | None,
+    *,
+    default: int,
+    minimum: int,
+    maximum: int,
+) -> int:
+    """Parse an integer environment setting and enforce a safe range."""
+    if value is None or not value.strip():
+        return default
+    try:
+        parsed = int(value.strip())
+    except ValueError as exc:
+        raise ConfigurationError(f"{name} must be a whole number.") from exc
+    if not minimum <= parsed <= maximum:
+        raise ConfigurationError(f"{name} must be between {minimum} and {maximum}.")
+    return parsed
+
+
 def load_config() -> Settings:
-    """Load `.env` and validate settings."""
+    """Load `.env` (without overriding real process env vars) and validate settings."""
     load_dotenv(dotenv_path=PROJECT_ROOT / ".env", override=False)
 
     token = os.getenv("DISCORD_BOT_TOKEN", "").strip()
@@ -101,6 +124,24 @@ def load_config() -> Settings:
             "postgresql+asyncpg:// for PostgreSQL deployments."
         )
 
+    verified_role_id = _parse_optional_id(
+        "SFD_VERIFIED_ROLE_ID", os.getenv("SFD_VERIFIED_ROLE_ID")
+    )
+    verification_expiry_minutes = _parse_bounded_int(
+        "VERIFICATION_EXPIRY_MINUTES",
+        os.getenv("VERIFICATION_EXPIRY_MINUTES"),
+        default=10,
+        minimum=2,
+        maximum=30,
+    )
+    verification_max_attempts = _parse_bounded_int(
+        "VERIFICATION_MAX_ATTEMPTS",
+        os.getenv("VERIFICATION_MAX_ATTEMPTS"),
+        default=5,
+        minimum=1,
+        maximum=10,
+    )
+
     raw_log_directory = os.getenv("LOG_DIRECTORY", "logs").strip() or "logs"
     log_directory = Path(raw_log_directory).expanduser()
     if not log_directory.is_absolute():
@@ -112,6 +153,9 @@ def load_config() -> Settings:
         sync_global_commands=sync_global_commands,
         log_level=log_level,
         database_url=raw_database_url,
+        verified_role_id=verified_role_id,
+        verification_expiry_minutes=verification_expiry_minutes,
+        verification_max_attempts=verification_max_attempts,
         log_directory=log_directory,
         project_root=PROJECT_ROOT,
     )

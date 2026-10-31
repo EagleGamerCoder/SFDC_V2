@@ -186,6 +186,81 @@ class ShiftSession(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utc_now, nullable=False)
 
 
+class ApparatusUnit(Base):
+    """A configured SFD radio unit / apparatus for one Discord guild."""
+
+    __tablename__ = "apparatus_units"
+    __table_args__ = (
+        UniqueConstraint("guild_id", "code", name="apparatus_unit_guild_code"),
+        CheckConstraint("guild_id > 0", name="positive_guild_id"),
+        Index("ix_apparatus_units_guild_enabled", "guild_id", "is_enabled"),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    guild_id: Mapped[int] = mapped_column(BigInteger, nullable=False)
+    code: Mapped[str] = mapped_column(String(8), nullable=False)
+    name: Mapped[str] = mapped_column(String(80), nullable=False)
+    division_key: Mapped[str] = mapped_column(String(64), nullable=False)
+    positions: Mapped[list[dict[str, Any]]] = mapped_column(JSON, nullable=False, default=list)
+    self_assignable: Mapped[bool] = mapped_column(Boolean, nullable=False, default=True)
+    is_enabled: Mapped[bool] = mapped_column(Boolean, nullable=False, default=True)
+    sort_order: Mapped[int] = mapped_column(Integer, nullable=False, default=100)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), default=utc_now, nullable=False
+    )
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), default=utc_now, onupdate=utc_now, nullable=False
+    )
+
+
+class ApparatusAssignment(Base):
+    """A current or historical callsign assignment for an SFD member."""
+
+    __tablename__ = "apparatus_assignments"
+    __table_args__ = (
+        CheckConstraint("status IN ('active', 'released')", name="valid_status"),
+        CheckConstraint("position_number >= 1", name="positive_position_number"),
+        CheckConstraint("length(callsign) > 0", name="nonempty_callsign"),
+        Index("ix_apparatus_assignments_guild_status", "guild_id", "status"),
+        Index("ix_apparatus_assignments_guild_member", "guild_id", "discord_id"),
+        Index(
+            "uq_apparatus_assignments_active_member",
+            "guild_id",
+            "discord_id",
+            unique=True,
+            sqlite_where=text("status = 'active'"),
+            postgresql_where=text("status = 'active'"),
+        ),
+        Index(
+            "uq_apparatus_assignments_active_position",
+            "apparatus_id",
+            "position_number",
+            unique=True,
+            sqlite_where=text("status = 'active'"),
+            postgresql_where=text("status = 'active'"),
+        ),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    guild_id: Mapped[int] = mapped_column(BigInteger, nullable=False)
+    apparatus_id: Mapped[int] = mapped_column(
+        Integer,
+        ForeignKey("apparatus_units.id", ondelete="CASCADE"),
+        nullable=False,
+    )
+    discord_id: Mapped[int] = mapped_column(BigInteger, nullable=False)
+    callsign: Mapped[str] = mapped_column(String(40), nullable=False)
+    position_number: Mapped[int] = mapped_column(Integer, nullable=False)
+    position_key: Mapped[str] = mapped_column(String(64), nullable=False)
+    position_label: Mapped[str] = mapped_column(String(80), nullable=False)
+    status: Mapped[str] = mapped_column(String(16), nullable=False, default="active")
+    assigned_by_discord_id: Mapped[int | None] = mapped_column(BigInteger, nullable=True)
+    assigned_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), default=utc_now, nullable=False
+    )
+    released_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+
+
 class AuditEvent(Base):
     """Structured record of a supported Discord or SFD-specific event."""
 
