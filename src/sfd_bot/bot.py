@@ -18,6 +18,7 @@ from sfd_bot.database.connection import Database
 # Add new  cogs here as they are tested and implimented.
 INITIAL_EXTENSIONS: tuple[str, ...] = (
     "sfd_bot.cogs.utilities",
+    "tests.staff_integrations",
 )
 
 """MAIN BOT CLASS"""
